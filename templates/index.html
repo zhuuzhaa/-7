@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список подарков</title>
+</head>
+<body>
+    <h1>Список подарков</h1>
+    <table border="1">
+        <tr>
+            <th>ФИО</th>
+            <th>Название подарка</th>
+            <th>Стоимость</th>
+            <th>Статус</th>
+        </tr>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row['full_name'] }}</td>
+            <td>{{ row['gift_name'] }}</td>
+            <td>{{ row['price'] }}</td>
+            <td>{{ row['status'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
